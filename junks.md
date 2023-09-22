@@ -1,4 +1,4 @@
-## set a maximum number of lines of text with CSS / line-clamp
+## Set a maximum number of lines of text with CSS / line-clamp
 
 ```
 .card__preview-text {
@@ -11,7 +11,7 @@
 }
 ```
 
-## creating triangle / arrow-box with border for popup or dialogue box
+## Creating triangle / arrow-box with border for popup or dialogue box
 
 ```
 .arrow {
