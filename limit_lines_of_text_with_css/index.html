@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.card-group {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+				padding: 2rem;
+			}
+			.card {
+				background: #fff;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+				border-radius: 8px;
+				padding: 2rem;
+			}
+			.cutoff-text {
+				--max-lines: 3;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: var(--max-lines);
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="card-group">
+			<article class="card">
+				<h2>Article 1</h2>
+				<p class="cutoff-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+					atque mollitia in exercitationem aspernatur enim aliquam repellendus
+					ullam optio nemo minima qui, nulla omnis, eveniet libero modi eum, vel
+					eligendi ab error ipsam minus. Iste earum magnam ipsum dicta maxime!
+				</p>
+			</article>
+			<article class="card">
+				<h2>Article 2</h2>
+				<p class="cutoff-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+					atque mollitia in exercitationem aspernatur enim aliquam repellendus
+					ullam optio nemo minima qui, nulla omnis, eveniet libero modi eum, vel
+					eligendi ab error ipsam minus. Iste earum magnam ipsum dicta maxime!
+				</p>
+			</article>
+			<article class="card">
+				<h2>Article 3</h2>
+				<p class="cutoff-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+					atque mollitia in exercitationem aspernatur enim aliquam repellendus
+					ullam optio nemo minima qui, nulla omnis, eveniet libero modi eum, vel
+					eligendi ab error ipsam minus. Iste earum magnam ipsum dicta maxime!
+				</p>
+			</article>
+		</section>
+	</body>
+</html>
