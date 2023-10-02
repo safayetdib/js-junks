@@ -89,3 +89,41 @@ window.addEventListener("popstate", (event) => {
     mainFuncBIS005();
 });
 ```
+
+## Get data from DOM
+
+```
+async function getDOM(url, callback) {
+  const response = await fetch(url);
+  const html = await response.text();
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+  return callback ? callback(doc) : doc;
+}
+
+```
+
+##
+
+```
+function networkCallObserver(callback) {
+  const observer = new PerformanceObserver((list) => {
+    list.getEntries().forEach((entry) => {
+      callback(entry.name);
+    });
+  });
+  observer.observe({entryTypes: ["resource"]});
+}
+```
+
+## Scroll down to specific section
+
+```
+element.addEventListener("click", () => {
+        const offsetY = -120;
+        const targetElement = getElement("#complete-the-look-section");
+        const positionY = targetElement.getBoundingClientRect().top + window.pageYOffset + offsetY;
+
+        window.scrollTo({top: positionY, behavior: "smooth"});
+      });
+```
