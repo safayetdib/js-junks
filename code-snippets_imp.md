@@ -127,3 +127,25 @@ element.addEventListener("click", () => {
         window.scrollTo({top: positionY, behavior: "smooth"});
       });
 ```
+
+## find matching words from a list of words in an array
+
+```
+function hasMatchingWord(products, search) {
+  const seenWords = new Set(); // To keep track of already seen words
+  const matches = [];
+  for (let i = search.length - 1; i >= 0; i--) {
+    const searchWord = search[i].toLowerCase();
+    for (const product of products) {
+      const productWord = product.split(" ").map((word) => word.toLowerCase());
+      if (productWord.includes(searchWord) && !seenWords.has(searchWord)) {
+        const capitalizedWord = searchWord.charAt(0).toUpperCase() + searchWord.slice(1);
+        matches.push(capitalizedWord);
+        seenWords.add(searchWord);
+      }
+    }
+    if (matches.length >= 5) break;
+  }
+  return matches;
+}
+```
