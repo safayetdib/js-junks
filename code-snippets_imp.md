@@ -149,3 +149,17 @@ function hasMatchingWord(products, search) {
   return matches;
 }
 ```
+
+## Split url testing
+
+target page URL through regex in convert : hotelcollection\.com\/products\/(scent-diffuser|penthouse-scent-diffuser|tower-scent-diffuser|villa-scent-diffuser|presidential-scent-diffuser|double-presidential-scent-diffuser)
+
+Set a cookie so that the test is not bucketed every time
+
+```
+console.log("test-29-bucketed");
+if (!document.cookie.includes("newTheme=bucketed")){
+   document.cookie = "newTheme=bucketed";
+   window.location.href = `${window.location.href}?_ab=0&_fd=0&_sc=1&preview_theme_id=133396168870`;
+}
+```
